@@ -30,18 +30,17 @@
 </head>
 <body>
   <div class="container">
-    <span class="badge badge-primary">Beginner</span>
+    <span class="badge badge-primary">Beginner's Guide</span>
     <h1 class="mb-4 mt-2">Setting and Configuring Babel.js in Projects</h1>
     <p>
-      Babel is a JavaScript Transcompiler to write newer version of JavaScript,
-      with older browser support. That said, Babel compile newer version of Javascript
+      Babel is a JavaScript Transcompiler, Babel compile newer version of Javascript
       like ES6 to older version of JS which have wider browser support.
     </p>
     <p>
-      There are many ways by which we can set up Babel in our project,
+      There are many ways by which we can set up Babel locally,
       but we are going to see how to setup Babel.js in our project using
-      Babel CLI. There are other options to setup Babel in projects, check them
-      out <a href="https://babeljs.io/docs/setup/">here</a>. To begin, here are few prequisites
+      Babel CLI. Checkout setting Babel using other methods
+      <a href="https://babeljs.io/docs/setup/">here</a>. To begin, here are few prequisites
       which must be available on your system.
     </p>
 
@@ -60,12 +59,14 @@
       </ol>
     </div>
     <h3>Steps</h3>
-    Following steps will guide you installing and configuring Babel in your project. <br>
-    If you are stuck, checkout <a target="_blank" href="https://babeljs.io/docs/setup/#installation">this</a> page for Babel-CLI installation.
+    <p>
+      Following steps will guide us installing and configuring Babel in our project. <br>
+      If stuck, checkout <a target="_blank" href="https://babeljs.io/docs/setup/#installation">this</a> page for Babel-CLI installation.
+    </p>
     <div class="col-sm-12 col-md-10 col-lg-8">
     <ol class="mt-3">
       <li class="mb-3">
-        <b>Initialise your Project with npm</b><br>
+        <b>Initialise Project with npm</b><br>
         To begin, open your terminal and move to the root directory of the project.
         Now initialise the project using npm.<br><br>
         <code>$&gt; npm init</code><br><br>
@@ -80,7 +81,7 @@
         It may take sometime to complete.
       </li>
       <li class="mb-3">
-        <b>Downloading Babel presets</b><br>
+        <b>Download Babel presets</b><br>
         Depending on your project's need, there are many presets that are
         used with Babel, for example here we are going to transpile
         ES2015 to old JS, hence we will be using es2015 preset.
@@ -103,7 +104,7 @@
       </li>
 
       <li class="mb-3">
-        <b>Writing Scripts in package.json</b><br>
+        <b>Writing Build script in package.json</b><br>
         After completing these steps, we need to write scripts to run babel from
         Command line, we can manually run the <a target="_blank" href="https://babeljs.io/docs/usage/cli/">commands</a>
         from the terminal, but we will be using
@@ -133,12 +134,12 @@
 
     }
         </pre>
-        <b>NOTE</b>: Always keep your source files in folder we mention
+        <b>NOTE</b>: Always keep source files in folder mentioned in build script.
         in our build script. In this case it is <kbd>src</kbd> folder.
         Babel will auto generate <kbd>lib</kbd> folder with all files containing compiled code.
       </li>
       <li class="mb-3">
-        <b>Apply presets</b><br>
+        <b>Apply presets in .babelrc</b><br>
         Babel is still not going function as we want. We still have to apply
         presets in order for Babel to work.
         In your root directory create a file with the name <kbd>.babelrc</kbd>. <br>
